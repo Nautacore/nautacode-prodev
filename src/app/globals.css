@@ -24,3 +24,49 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ==================================== */
+/* EFECTO DE ESTRELLAS PARA FONDO */
+/* ==================================== */
+
+/* Contenedor que contendrá el efecto */
+.star-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Estrellas pequeñas */
+.star-field::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3000px; /* Tamaño grande para que se desplace */
+  height: 3000px;
+  background: transparent url('/stars_small.png') repeat top left; /* Usaremos una imagen base */
+  animation: star-move 100s linear infinite;
+}
+
+/* Estrellas medianas y grandes (simulado) */
+.star-field::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3000px;
+  height: 3000px;
+  background: transparent url('/stars_large.png') repeat top left; /* Otra capa de estrellas */
+  animation: star-move 150s linear infinite;
+  opacity: 0.8;
+  transform: scale(0.5); /* Las hace parecer más lejanas */
+}
+
+/* Definición de la animación de movimiento */
+@keyframes star-move {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-2000px, 2000px); } /* Se mueven diagonalmente */
+}
