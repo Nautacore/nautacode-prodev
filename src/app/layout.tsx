@@ -27,3 +27,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+// Esto es un push de prueba final para Vercel (Intento 3)

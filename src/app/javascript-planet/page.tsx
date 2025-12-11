@@ -1,66 +1,68 @@
-// src/app/javascript-planet/page.tsx
+// src/app/javascript-planet/page.tsx - ¡CÓDIGO CORREGIDO!
 
 import Link from 'next/link';
-import { Cpu, Repeat, Zap } from 'lucide-react';
+import { Zap, Code, Terminal, Cpu } from 'lucide-react';
 
-export default function JavaScriptPlanetPage() {
+export default function JavascriptPlanetPage() {
   return (
     <main className="min-h-screen p-8 pt-24">
       <div className="container mx-auto max-w-4xl">
         
-        <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-600 mb-6 flex items-center">
-          <Zap className="w-8 h-8 mr-3" /> Planeta JavaScript: La Lógica y la Interactividad
+        <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-6 flex items-center">
+          <Zap className="w-8 h-8 mr-3" /> JavaScript Planet: La Acción y la Lógica
         </h1>
         <p className="text-lg text-gray-400 mb-8">
-          JavaScript (JS) es el lenguaje de programación que da vida, lógica e interactividad a tu sitio. Permite que el contenido se actualice, gestiona clics de usuario y maneja la información dinámica.
+          JavaScript (JS) es el lenguaje de programación que convierte un sitio web estático en una aplicación dinámica e interactiva. Es el motor que permite las animaciones, la manipulación de datos y la comunicación con servidores.
         </p>
 
-        {/* Sección 1: El Cerebro del Sitio */}
+        {/* Sección 1: El DOM y la Interactividad */}
         <div className="bg-gray-800/50 p-6 rounded-lg shadow-xl border border-gray-700 mb-8">
           <h2 className="text-3xl font-bold text-gray-200 mb-4 flex items-center">
-            <Cpu className="w-6 h-6 mr-2 text-yellow-400" /> 1. Manejando el DOM y Eventos
+            <Terminal className="w-6 h-6 mr-2 text-yellow-400" /> 1. Manipulación del DOM
           </h2>
           <p className="text-gray-300 mb-4">
-            JS puede manipular el DOM (Document Object Model), que es la representación de tu HTML. Esto permite cambiar texto, colores o añadir elementos en tiempo real, basándose en las acciones del usuario (eventos como clics).
+            El DOM (Document Object Model) es la representación estructurada (en forma de árbol) de la página web que permite a JavaScript leer y modificar dinámicamente el contenido y el estilo del HTML. Cada elemento es un nodo que JS puede alterar.
           </p>
-          
-          <h3 className="text-xl font-semibold text-yellow-300 mt-6 mb-2">Ejemplo de Evento:</h3>
-          <div className="bg-black p-4 rounded text-sm overflow-x-auto font-mono text-green-300">
+          <h3 className="text-xl font-semibold text-yellow-300 mt-6 mb-2">Ejemplo de Uso:</h3>
+          <div className="bg-black p-4 rounded text-sm overflow-x-auto font-mono text-cyan-300">
             {/* Ejemplo de Bloque de Código */}
-            <span className="text-blue-400">const</span> boton = <span className="text-purple-400">document.getElementById</span>('miBoton'); <br/>
-            boton.<span className="text-purple-400">addEventListener</span>(<span className="text-red-300">'click'</span>, (<span className="text-cyan-300">e</span>) =&gt; {'{'} <br/>
-            &nbsp; <span className="text-purple-400">alert</span>('¡Clic detectado!'); <br/>
+            <span className="text-blue-400">const</span> boton = document.<span className="text-yellow-400">getElementById</span>('miBoton');<br/>
+            boton.<span className="text-yellow-400">addEventListener</span>('click', () <span className="text-blue-400">=></span> {'{'} <br/>
+            &nbsp; alert('¡Click!');<br/>
             {'}'});
           </div>
+          <p className="text-gray-400 mt-4 text-sm italic">
+            Este código busca un botón por su ID y le añade una acción que se ejecuta al hacer clic.
+          </p>
         </div>
 
-        {/* Sección 2: La Evolución (Next.js/React) */}
+        {/* Sección 2: La Evolución a Frameworks */}
         <div className="bg-gray-800/50 p-6 rounded-lg shadow-xl border border-gray-700 mb-8">
           <h2 className="text-3xl font-bold text-gray-200 mb-4 flex items-center">
-            <Repeat className="w-6 h-6 mr-2 text-yellow-400" /> 2. JavaScript Moderno: React
+            <Cpu className="w-6 h-6 mr-2 text-yellow-400" /> 2. React y la Abstracción
           </h2>
           <p className="text-gray-300 mb-4">
-            Actualmente, JS se usa a través de frameworks como React, que es la base de Next.js. React permite construir interfaces complejas usando **Componentes** (como la Navbar que creamos), gestionando el estado de la aplicación de manera eficiente.
+            Si bien el JavaScript nativo funciona bien para tareas pequeñas, las aplicaciones modernas requieren frameworks (como React) para manejar la complejidad. React evita la manipulación directa del DOM usando un concepto de "Estado", y solo actualiza lo necesario.
           </p>
-          
+          <h3 className="text-xl font-semibold text-yellow-300 mt-6 mb-2">Ciclo de Vida del Componente:</h3>
           <p className="text-gray-400 mt-4 text-sm italic">
-            Trabajar con Next.js significa que estás utilizando la versión más avanzada y estructurada de JavaScript para construir tu sitio.
+            React gestiona internamente cuándo un componente se crea, se actualiza y se elimina. Entender este ciclo es clave para optimizar el rendimiento y la gestión de datos.
           </p>
         </div>
 
-        {/* Navegación Final */}
+        {/* Navegación */}
         <div className="mt-12 text-center">
           <Link 
             href="/css-planet" 
             className="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300 mr-4"
           >
-            ← Planeta Anterior: CSS
+            ← Anterior: CSS Planet
           </Link>
           <Link 
             href="/frontend-exploration" 
-            className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300"
+            className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300"
           >
-            Continuar a Exploración Frontend →
+            Siguiente: Exploración Frontend →
           </Link>
         </div>
 

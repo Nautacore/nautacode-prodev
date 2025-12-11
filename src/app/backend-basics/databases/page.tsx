@@ -1,4 +1,4 @@
-// src/app/backend-basics/databases/page.tsx
+// src/app/backend-basics/databases/page.tsx - ¡CÓDIGO CORREGIDO!
 
 import Link from 'next/link';
 import { Database, Table, Zap, FileJson } from 'lucide-react';
