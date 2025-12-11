@@ -28,4 +28,4 @@ export default function RootLayout({
   );
 }
 
-// Esto es un push FINAL DE VERIFICACION (2025-12-11)
+// ¡FORZANDO BUILD LIMPIO Y FINAL!
