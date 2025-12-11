@@ -1,4 +1,4 @@
-// src/app/frontend-exploration/react-props/page.tsx - ¡CÓDIGO CORREGIDO!
+// src/app/frontend-exploration/react-props/page.tsx - ¡CÓDIGO FINALMENTE CORREGIDO!
 
 import Link from 'next/link';
 import { Component, ArrowRight, Package } from 'lucide-react';
@@ -23,8 +23,6 @@ export default function ReactPropsPage() {
           <p className="text-gray-300 mb-4">
             La regla más importante de las props es que fluyen en una sola dirección: **del componente padre al componente hijo**. Los componentes hijos reciben las props y las utilizan para renderizar, pero no pueden modificarlas. Son **inmutables**.
           </p>
-          
-
           <h3 className="text-xl font-semibold text-purple-300 mt-6 mb-2">Sintaxis:</h3>
           <p className="text-gray-400 mt-2 text-sm italic">
             Las props se reciben como un único objeto dentro de la función del componente.
@@ -41,6 +39,7 @@ export default function ReactPropsPage() {
           </p>
           
           <h3 className="text-xl font-semibold text-purple-300 mt-6 mb-2">Ejemplo de Uso:</h3>
+          {/* EL BLOQUE CRÍTICO CORREGIDO */}
           <div className="bg-black p-4 rounded text-sm overflow-x-auto font-mono text-cyan-300">
             {/* Componente Padre */}
             &lt;PlanetCard <br/>
@@ -50,7 +49,7 @@ export default function ReactPropsPage() {
             /&gt;
             {/* Componente Hijo (Recibe) */}
             <br/>
-            <span className="text-blue-400">const</span> PlanetCard = ({ <span className="text-yellow-400">title, description, colorClass</span> }) <span className="text-blue-400">=></span> {'{'} /* ... */ {'}'} 
+            <span className="text-blue-400">const</span> PlanetCard = (&#123; <span className="text-yellow-400">title, description, colorClass</span> &#125;) <span className="text-blue-400">=></span> &#123; /* ... */ &#125; 
           </div>
           <p className="text-gray-400 mt-4 text-sm italic">
             El componente `PlanetCard` se vuelve dinámico y reutilizable gracias a las props.

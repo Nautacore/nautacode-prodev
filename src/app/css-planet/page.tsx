@@ -1,70 +1,69 @@
-// src/app/css-planet/page.tsx - ¡CÓDIGO CORREGIDO!
+// src/app/javascript-planet/page.tsx - ¡CÓDIGO FINALMENTE CORREGIDO!
 
 import Link from 'next/link';
-import { Layout, Palette, Zap } from 'lucide-react';
+import { Zap, Code, Terminal, Cpu } from 'lucide-react';
 
-export default function CSSPlanetPage() {
+export default function JavascriptPlanetPage() {
   return (
     <main className="min-h-screen p-8 pt-24">
       <div className="container mx-auto max-w-4xl">
         
-        <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500 mb-6 flex items-center">
-          <Palette className="w-8 h-8 mr-3" /> CSS Planet: La Navegación Visual
+        <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-6 flex items-center">
+          <Zap className="w-8 h-8 mr-3" /> JavaScript Planet: La Acción y la Lógica
         </h1>
         <p className="text-lg text-gray-400 mb-8">
-          CSS (Cascading Style Sheets) es el lenguaje que define la apariencia y el estilo de tu sitio web. Sin CSS, la web sería solo texto sin formato y enlaces azules.
+          JavaScript (JS) es el lenguaje de programación que convierte un sitio web estático en una aplicación dinámica e interactiva. Es el motor que permite las animaciones, la manipulación de datos y la comunicación con servidores.
         </p>
 
-        {/* Sección 1: Estructura vs Estilo */}
+        {/* Sección 1: El DOM y la Interactividad */}
         <div className="bg-gray-800/50 p-6 rounded-lg shadow-xl border border-gray-700 mb-8">
           <h2 className="text-3xl font-bold text-gray-200 mb-4 flex items-center">
-            <Layout className="w-6 h-6 mr-2 text-blue-400" /> 1. Separación de Responsabilidades
+            <Terminal className="w-6 h-6 mr-2 text-yellow-400" /> 1. Manipulación del DOM
           </h2>
           <p className="text-gray-300 mb-4">
-            La regla de oro del desarrollo es la separación: HTML para la estructura (qué es el contenido) y CSS para el estilo (cómo se ve el contenido). Mantenerlos separados hace el código más limpio, fácil de mantener y más accesible.
+            El DOM (Document Object Model) es la representación estructurada (en forma de árbol) de la página web que permite a JavaScript leer y modificar dinámicamente el contenido y el estilo del HTML. Cada elemento es un nodo que JS puede alterar.
           </p>
-          <h3 className="text-xl font-semibold text-blue-300 mt-6 mb-2">Conceptos Clave:</h3>
-          <ul className="list-disc list-inside text-gray-300 ml-4">
-            <li>**Selectores:** Cómo el CSS sabe a qué elementos HTML aplicar el estilo (`.clase`, `#id`, `p`, `h1`).</li>
-            <li>**Cascada:** El orden de precedencia que determina qué estilo se aplica si hay conflictos.</li>
-            <li>**Box Model:** Cada elemento HTML es una caja con contenido, padding, borde y margen.</li>
-          </ul>
-        </div>
-
-        {/* Sección 2: Tailwind CSS (Framework de Utilidades) */}
-        <div className="bg-gray-800/50 p-6 rounded-lg shadow-xl border border-gray-700 mb-8">
-          <h2 className="text-3xl font-bold text-gray-200 mb-4 flex items-center">
-            <Zap className="w-6 h-6 mr-2 text-blue-400" /> 2. La Velocidad de Tailwind CSS
-          </h2>
-          <p className="text-gray-300 mb-4">
-            Tailwind CSS es un framework de CSS basado en clases de utilidad. En lugar de escribir CSS tradicional, se aplican clases predefinidas directamente en el HTML (JSX en nuestro caso). Esto permite construir interfaces rápidamente sin salir del archivo del componente.
-          </p>
-          
-          <h3 className="text-xl font-semibold text-blue-300 mt-6 mb-2">Ejemplo de Código:</h3>
+          <h3 className="text-xl font-semibold text-yellow-300 mt-6 mb-2">Ejemplo de Uso:</h3>
+          {/* EL BLOQUE CRÍTICO CORREGIDO */}
           <div className="bg-black p-4 rounded text-sm overflow-x-auto font-mono text-cyan-300">
             {/* Ejemplo de Bloque de Código */}
-            &lt;button <span className="text-green-300">className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"</span>&gt; <br/>
-            &nbsp; Botón Estilizado <br/>
-            &lt;/button&gt;
+            <span className="text-blue-400">const</span> boton = document.<span className="text-yellow-400">getElementById</span>('miBoton');<br/>
+            boton.<span className="text-yellow-400">addEventListener</span>('click', () <span className="text-blue-400">=></span> &#123; <br/>
+            &nbsp; alert('¡Click!');<br/>
+            &#125;);
           </div>
           <p className="text-gray-400 mt-4 text-sm italic">
-            El código se lee fácilmente: fondo azul, hover azul oscuro, texto blanco, negrita, padding y bordes redondeados.
+            Este código busca un botón por su ID y le añade una acción que se ejecuta al hacer clic.
+          </p>
+        </div>
+
+        {/* Sección 2: La Evolución a Frameworks */}
+        <div className="bg-gray-800/50 p-6 rounded-lg shadow-xl border border-gray-700 mb-8">
+          <h2 className="text-3xl font-bold text-gray-200 mb-4 flex items-center">
+            <Cpu className="w-6 h-6 mr-2 text-yellow-400" /> 2. React y la Abstracción
+          </h2>
+          <p className="text-gray-300 mb-4">
+            Si bien el JavaScript nativo funciona bien para tareas pequeñas, las aplicaciones modernas requieren frameworks (como React) para manejar la complejidad. React evita la manipulación directa del DOM usando un concepto de "Estado", y solo actualiza lo necesario.
+          </p>
+          <h3 className="text-xl font-semibold text-yellow-300 mt-6 mb-2">Ciclo de Vida del Componente:</h3>
+          <p className="text-gray-400 mt-4 text-sm italic">
+            React gestiona internamente cuándo un componente se crea, se actualiza y se elimina. Entender este ciclo es clave para optimizar el rendimiento y la gestión de datos.
           </p>
         </div>
 
         {/* Navegación */}
         <div className="mt-12 text-center">
           <Link 
-            href="/html-planet" 
+            href="/css-planet" 
             className="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300 mr-4"
           >
-            ← Anterior: HTML Planet
+            ← Anterior: CSS Planet
           </Link>
           <Link 
-            href="/javascript-planet" 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300"
+            href="/frontend-exploration" 
+            className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300"
           >
-            Siguiente: JavaScript Planet →
+            Siguiente: Exploración Frontend →
           </Link>
         </div>
 
