@@ -47,14 +47,11 @@ export default function ReactPropsPage() {
             &nbsp; <span className="text-yellow-400">description="El esqueleto..."</span> <br/>
             &nbsp; <span className="text-yellow-400">colorClass="bg-red-700/30"</span> <br/>
             /&gt;
-            {/* Componente Hijo (Recibe) */}
-            <br/>
-            boton.<span className="text-yellow-400">addEventListener</span>('click', () <span className="text-blue-400">=></span> &#123; <br/> 
+           {/* Componente Hijo (Recibe) */}
+          <br/>
+          <div className="bg-black p-4 rounded text-sm overflow-x-auto font-mono text-cyan-300">
+            <span className="text-blue-400">const</span> PlanetCard = (&#123; <span className="text-yellow-400">title,</span> description, colorClass &#125;) <span className="text-blue-400">=></span> &#123; /* ... */ &#125;;
           </div>
-          <p className="text-gray-400 mt-4 text-sm italic">
-            El componente `PlanetCard` se vuelve dinámico y reutilizable gracias a las props.
-          </p>
-        </div>
 
         {/* Navegación */}
         <div className="mt-12 text-center">
