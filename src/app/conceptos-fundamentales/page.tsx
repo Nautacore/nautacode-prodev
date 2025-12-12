@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Definimos qué tipo de datos recibe la tarjeta (Para que TypeScript no se queje)
+// 1. Le explicamos a TypeScript qué tipo de datos recibe la tarjeta
 interface PlanetCardProps {
   title: string;
   description: string;
@@ -9,7 +9,7 @@ interface PlanetCardProps {
   link: string;
 }
 
-// Componente Tarjeta de Planeta
+// 2. Aplicamos esos tipos al componente
 const PlanetCard = ({ title, description, colorClass, icon: Icon, link }: PlanetCardProps) => (
   <div className={`p-6 rounded-xl shadow-2xl transition-all duration-500 hover:scale-[1.02] transform border-t-4 ${colorClass} bg-slate-800`}>
     <div className="flex items-center mb-4">
@@ -32,10 +32,11 @@ export default function ConceptosPage() {
   return (
     <main className="min-h-screen bg-slate-900 p-8">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-8">Conceptos Fundamentales</h1>
+        <h1 className="text-4xl font-bold text-white mb-8 text-center">Conceptos Fundamentales</h1>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Aquí puedes agregar tus PlanetCards después, por ahora esto lo hará compilar */}
-          <p className="text-white">Preparando el despliegue del sistema...</p>
+           {/* Por ahora dejamos un mensaje para que compile rápido */}
+           <p className="text-cyan-400 font-mono">Construyendo el mapa estelar...</p>
         </div>
       </div>
     </main>
