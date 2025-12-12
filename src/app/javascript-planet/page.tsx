@@ -24,13 +24,13 @@ export default function JavascriptPlanetPage() {
             El DOM (Document Object Model) es la representación estructurada (en forma de árbol) de la página web que permite a JavaScript leer y modificar dinámicamente el contenido y el estilo del HTML. Cada elemento es un nodo que JS puede alterar.
           </p>
           <h3 className="text-xl font-semibold text-yellow-300 mt-6 mb-2">Ejemplo de Uso:</h3>
-          {/* EL BLOQUE CRÍTICO CORREGIDO */}
+          {/* Ejemplo de Bloque de Código */}
           <div className="bg-black p-4 rounded text-sm overflow-x-auto font-mono text-cyan-300">
-            {/* Ejemplo de Bloque de Código */}
             <span className="text-blue-400">const</span> boton = document.<span className="text-yellow-400">getElementById</span>('miBoton');<br/>
             boton.<span className="text-yellow-400">addEventListener</span>('click', () <span className="text-blue-400">=></span> &#123; <br/>
             &nbsp; alert('¡Click!');<br/>
             &#125;);
+          </div>
           </div>
           <p className="text-gray-400 mt-4 text-sm italic">
             Este código busca un botón por su ID y le añade una acción que se ejecuta al hacer clic.
