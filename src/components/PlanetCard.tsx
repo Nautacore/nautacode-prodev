@@ -1,17 +1,19 @@
+"use client";
 // ------------------------------------------------------------------
 // Archivo: src/components/PlanetCard.tsx
 // ROL: Contiene toda la LÓGICA y DISEÑO de una sola tarjeta.
 // ------------------------------------------------------------------
+
 import React, { useState } from 'react';
 import { LucideIcon } from 'lucide-react';
 
 // Tipos de datos para TypeScript (necesita exportarse)
 export interface PlanetCardProps {
-  title: string;
-  description: string;
-  colorClass: string;
-  icon: LucideIcon; 
-  link: string;
+    title: string;
+    description: string;
+    colorClass: string;
+    icon: LucideIcon; 
+    link: string;
 }
 
 // Componente Tarjeta de Planeta con su estado interno (useState)
