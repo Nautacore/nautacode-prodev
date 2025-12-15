@@ -2,7 +2,7 @@
 
 "use client"; // Es buena práctica usarlo si hay formularios o interacción
 
-import Link from 'next/link';
+
 
 export default function ContactoPage() {
   
