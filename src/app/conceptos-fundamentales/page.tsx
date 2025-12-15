@@ -1,3 +1,4 @@
+"use client";
 // ------------------------------------------------------------------
 // Archivo: src/app/conceptos-fundamentales/page.tsx
 // ROL: Contiene solo la estructura de la página y usa los componentes.
