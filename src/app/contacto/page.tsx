@@ -1,0 +1,76 @@
+// src/app/contacto/page.tsx
+
+"use client"; // Es buena práctica usarlo si hay formularios o interacción
+
+import Link from 'next/link';
+
+export default function ContactoPage() {
+  
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    alert('Mensaje enviado (simulado)!');
+  };
+
+  return (
+    <main className="min-h-screen bg-slate-900 p-8 flex items-center justify-center">
+      
+      <section className="bg-slate-800 p-8 rounded-xl shadow-2xl max-w-lg w-full">
+        
+        <h1 className="text-3xl font-bold text-white mb-6 text-center">Órbita de Contacto</h1>
+        <p className="text-gray-400 mb-8 text-center">Envía tu señal al centro de control estelar.</p>
+        
+        {/* INICIO DEL FORMULARIO CON ESTRUCTURA HTML PROFESIONAL */}
+        <form onSubmit={handleSubmit} className="space-y-4">
+          
+          <div>
+            <label htmlFor="nombre" className="block text-sm font-medium text-gray-300">
+              Nombre de Explorador
+            </label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              className="mt-1 block w-full rounded-md border-gray-600 bg-slate-700 text-white p-2"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+              Correo Electrónico (Vía de Retorno)
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              className="mt-1 block w-full rounded-md border-gray-600 bg-slate-700 text-white p-2"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="mensaje" className="block text-sm font-medium text-gray-300">
+              Mensaje a la Base
+            </label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows={4}
+              required
+              className="mt-1 block w-full rounded-md border-gray-600 bg-slate-700 text-white p-2"
+            ></textarea>
+          </div>
+          
+          <button
+            type="submit"
+            className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Enviar Transmisión
+          </button>
+        </form>
+        {/* FIN DEL FORMULARIO */}
+
+      </section>
+    </main>
+  );
+}
