@@ -9,7 +9,7 @@ import PlanetCard from '@/components/PlanetCard'; // <-- ¡Aquí importamos la t
 export default function ConceptosPage() {
   return (
     <main className="min-h-screen bg-slate-900 p-8">
-      <div className="max-w-6xl mx-auto">
+        <section className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-white mb-12 text-center">Navegación Estelar de Conceptos </h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
