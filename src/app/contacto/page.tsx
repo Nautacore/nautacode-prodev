@@ -1,15 +1,10 @@
 // src/app/contacto/page.tsx
 
-"use client"; // Es buena práctica usarlo si hay formularios o interacción
-
-
+"use client"; // ¡Debe estar aquí!
 
 export default function ContactoPage() {
   
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    alert('Mensaje enviado (simulado)!');
-  };
+  // (La función handleSubmit debe haber sido eliminada)
 
   return (
     <main className="min-h-screen bg-slate-900 p-8 flex items-center justify-center">
@@ -19,8 +14,8 @@ export default function ContactoPage() {
         <h1 className="text-3xl font-bold text-white mb-6 text-center">Órbita de Contacto</h1>
         <p className="text-gray-400 mb-8 text-center">Envía tu señal al centro de control estelar.</p>
         
-        {/* INICIO DEL FORMULARIO CON ESTRUCTURA HTML PROFESIONAL */}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        {/* REVISAR: SIN onSubmit. Solo acción y método. */}
+        <form action="#" method="POST" className="space-y-4">
           
           <div>
             <label htmlFor="nombre" className="block text-sm font-medium text-gray-300">
@@ -34,32 +29,8 @@ export default function ContactoPage() {
               className="mt-1 block w-full rounded-md border-gray-600 bg-slate-700 text-white p-2"
             />
           </div>
-
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-300">
-              Correo Electrónico (Vía de Retorno)
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              className="mt-1 block w-full rounded-md border-gray-600 bg-slate-700 text-white p-2"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="mensaje" className="block text-sm font-medium text-gray-300">
-              Mensaje a la Base
-            </label>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              rows={4}
-              required
-              className="mt-1 block w-full rounded-md border-gray-600 bg-slate-700 text-white p-2"
-            ></textarea>
-          </div>
+          
+          {/* ... otros campos email y mensaje ... */}
           
           <button
             type="submit"
@@ -68,7 +39,6 @@ export default function ContactoPage() {
             Enviar Transmisión
           </button>
         </form>
-        {/* FIN DEL FORMULARIO */}
 
       </section>
     </main>
