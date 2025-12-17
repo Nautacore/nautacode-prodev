@@ -24,6 +24,10 @@ export default function Navbar() {
           <Link href="/backend-basics" className="text-gray-300 hover:text-green-400 font-medium transition duration-300 ease-in-out">
             Backend
           </Link>
+
+          <Link href="/contacto" className="text-gray-300 hover:text-white transition-colors">
+            Contacto
+          </Link>
         </div>
       </div>
     </nav>
