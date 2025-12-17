@@ -2,7 +2,7 @@
 
 "use client";
 
-import { Code, Functions } from 'lucide-react';
+import { Code, Braces } from 'lucide-react';
 import PlanetCard from '@/components/PlanetCard';
 
 // 1. DEFINICIÓN DE DATOS (Arriba del componente para limpieza)
@@ -18,7 +18,7 @@ const cardsData = [
         title: "Funciones y Scope",
         description: "Cómo crear bloques de código reutilizables.",
         colorClass: "border-teal-500",
-        icon: Functions,
+        icon: Braces,
         link: "/functions-planet"
     },
     // Añade aquí más tarjetas si es necesario
