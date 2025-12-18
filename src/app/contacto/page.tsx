@@ -3,7 +3,7 @@
 export default function ContactoPage() {
   return (
     // Forzamos el fondo oscuro y un padding superior para que el Navbar no tape el título
-    <main className="min-h-screen bg-[#0a0a0a] pt-24 pb-12 px-4 flex flex-col items-center">
+    <main className="min-h-screen bg-[#0a0a0a] pt-24 pb-12 px-4 flex flex-col items-center relative overflow-hidden">
       <div className="star-field"></div> {/* Esto activa tus estrellas del globals.css */}
       
       <section className="relative z-10 bg-slate-900/80 backdrop-blur-md p-8 rounded-2xl border border-slate-700 shadow-2xl max-w-lg w-full">

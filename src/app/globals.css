@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../app"; /* <--- Esto le dice a Tailwind v4 que escanee tu carpeta app */
 
 :root {
   --background: #ffffff;
