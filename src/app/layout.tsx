@@ -1,5 +1,6 @@
 // src/app/layout.tsx
 import './globals.css';
+import Navbar from '@/components/Navbar'; // <--- 1. IMPORTAMOS LA NAVBAR
 
 export default function RootLayout({
   children,
@@ -8,10 +9,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>
-        <main>  {/* <--- CAMBIA el div principal por <main> */}
+      <body className="bg-[#0a0a0a]"> {/* Forzamos el fondo oscuro global */}
+        <Navbar /> {/* <--- 2. LA PONEMOS AQUÍ PARA QUE SALGA EN TODO EL SITIO */}
+        <main>
           {children}
-        </main> {/* <--- CAMBIA el div principal por </main> */}
+        </main>
       </body>
     </html>
   )
