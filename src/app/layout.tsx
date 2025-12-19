@@ -11,7 +11,7 @@ export default function RootLayout({
     <html lang="es">
       <body className="bg-[#0a0a0a]"> {/* Forzamos el fondo oscuro global */}
         <Navbar /> {/* <--- 2. LA PONEMOS AQUÍ PARA QUE SALGA EN TODO EL SITIO */}
-        <main>
+        <main className="pt-20"> {/* Añade pt-20 (padding-top) para empujar el contenido hacia abajo */}
           {children}
         </main>
       </body>
