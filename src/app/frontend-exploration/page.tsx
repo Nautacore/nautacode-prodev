@@ -27,7 +27,7 @@ const SystemCard = ({ title, description, icon: Icon, link }: SystemCardProps) =
 
 export default function FrontendExplorationPage() {
   return (
-    <main className="min-h-screen bg-slate-900 p-8">
+    <main className="min-h-screen pt-24 px-4 bg-[#0a0a0a]">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-white mb-10 text-center">Sistemas de Exploración Frontend</h1>
         
