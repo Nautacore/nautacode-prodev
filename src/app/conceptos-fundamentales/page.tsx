@@ -9,7 +9,7 @@ import PlanetCard from '@/components/PlanetCard';
 const cardsData = [
     {
         title: "Sintaxis Básica",
-        description: "Los cimientos de cualquier lenguaje de programación.",
+        description: "El camino del código.",
         colorClass: "border-blue-500",
         icon: Code,
         link: "/javascript-planet"

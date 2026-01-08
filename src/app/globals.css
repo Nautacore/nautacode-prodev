@@ -2,8 +2,8 @@
 @source "../app"; /* <--- Esto le dice a Tailwind v4 que escanee tu carpeta app */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -23,7 +23,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Courier New', Courier, monospace; /* Un toque más técnico */
 }
 
 /* ==================================== */
